@@ -55,7 +55,7 @@
       <h1 id="page-top" class="w-full text-center">Accessibility guidelines</h1>
       <nav>
         <ul
-          class="flex min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
+          class="flex flex-wrap min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
         >
           <li><a href="#web-interface">Web interface</a></li>
           <li><a href="#interactivity">Interactivity</a></li>
@@ -103,25 +103,23 @@
     <!--  -->
     <article id="interactivity">
       <h2>#Interactivity</h2>
-      <ul>
-        <li>Clicking the input label should focus the input field</li>
-        <li>Inputs should be wrapped with a "&lt;form&gt;" to submit by pressing Enter</li>
-        <li>Inputs should have an appropriate "type" like "password", "email", etc</li>
-        <li>Inputs should disable "spellcheck" and "autocomplete" attributes most of the time</li>
-        <li>Inputs should leverage HTML form validation by using the "required" attribute when appropriate</li>
-        <li>
-          Input prefix and suffix decorations, such as icons, should be absolutely positioned on top of the text input
-          with padding, not next to it, and trigger focus on the input
-        </li>
-        <li>Toggles should immediately take effect, not require confirmation</li>
-        <li>Buttons should be disabled after submission to avoid duplicate network requests</li>
-        <li>Interactive elements should disable "user-select" for inner content</li>
-        <li>Decorative elements (glows, gradients) should disable "pointer-events" to not hijack events</li>
-        <li>
-          Interactive elements in a vertical or horizontal list should have no dead areas between each element, instead,
-          increase their "padding"
-        </li>
-      </ul>
+      <p>Clicking the input label should focus the input field</p>
+      <p>Inputs should be wrapped with a "&lt;form&gt;" to submit by pressing Enter</p>
+      <p>Inputs should have an appropriate "type" like "password", "email", etc</p>
+      <p>Inputs should disable "spellcheck" and "autocomplete" attributes most of the time</p>
+      <p>Inputs should leverage HTML form validation by using the "required" attribute when appropriate</p>
+      <p>
+        Input prefix and suffix decorations, such as icons, should be absolutely positioned on top of the text input
+        with padding, not next to it, and trigger focus on the input
+      </p>
+      <p>Toggles should immediately take effect, not require confirmation</p>
+      <p>Buttons should be disabled after submission to avoid duplicate network requests</p>
+      <p>Interactive elements should disable "user-select" for inner content</p>
+      <p>Decorative elements (glows, gradients) should disable "pointer-events" to not hijack events</p>
+      <p>
+        Interactive elements in a vertical or horizontal list should have no dead areas between each element, instead,
+        increase their "padding"
+      </p>
     </article>
     <hr />
     <!--  -->
@@ -133,28 +131,26 @@
     <!--  -->
     <article id="typography">
       <h2>#Typography</h2>
-      <ul>
-        <li>Fonts should have "-webkit-font-smoothing: antialiased" applied for better legibility</li>
-        <li>Fonts should have "text-rendering: optimizeLegibility" applied for better legibility</li>
-        <li>Fonts should be subset based on the content, alphabet or relevant language(s)</li>
-        <li>Font weight should not change on hover or selected state to prevent layout shift</li>
-        <li>Font weights below 400 should not be used</li>
-        <li>Medium sized headings generally look best with a font weight between 500-600</li>
-        <li>
-          Adjust values fluidly by using CSS
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp" target="_blank">"clamp()"</a>, e.g.
-          "clamp(48px, 5vw, 72px)" for the "font-size" of a heading
-        </li>
-        <li>
-          Where available, tabular figures should be applied with "font-variant-numeric: tabular-nums", particularly in
-          tables or when layout shifts are undesirable, like in timers
-        </li>
-        <li>Prevent text resizing unexpectedly in landscape mode on iOS with "-webkit-text-size-adjust: 100%"</li>
-        <li>
-          In general, when there is an Unicode equivalent for the subscript/superscript, you should use that character
-          directly instead of the sub/sup element.
-        </li>
-      </ul>
+      <p>Fonts should have "-webkit-font-smoothing: antialiased" applied for better legibility</p>
+      <p>Fonts should have "text-rendering: optimizeLegibility" applied for better legibility</p>
+      <p>Fonts should be subset based on the content, alphabet or relevant language(s)</p>
+      <p>Font weight should not change on hover or selected state to prevent layout shift</p>
+      <p>Font weights below 400 should not be used</p>
+      <p>Medium sized headings generally look best with a font weight between 500-600</p>
+      <p>
+        Adjust values fluidly by using CSS
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp" target="_blank">"clamp()"</a>, e.g.
+        "clamp(48px, 5vw, 72px)" for the "font-size" of a heading
+      </p>
+      <p>
+        Where available, tabular figures should be applied with "font-variant-numeric: tabular-nums", particularly in
+        tables or when layout shifts are undesirable, like in timers
+      </p>
+      <p>Prevent text resizing unexpectedly in landscape mode on iOS with "-webkit-text-size-adjust: 100%"</p>
+      <p>
+        In general, when there is an Unicode equivalent for the subscript/superscript, you should use that character
+        directly instead of the sub/sup element.
+      </p>
     </article>
     <hr />
     <!--  -->
@@ -166,31 +162,26 @@
     <!--  -->
     <article id="motion">
       <h2>#Motion</h2>
+      <p id="content-motion-1">
+        Switching themes should not trigger transitions and animations on elements
+        <a href="#footnote-motion-1" aria-label="footnote motion 1"><sup>1</sup></a>
+      </p>
+      <p>Animation duration should not be more than 200ms for interactions to feel immediate</p>
+
       <ul>
-        <li id="content-motion-1">
-          Switching themes should not trigger transitions and animations on elements
-          <a href="#footnote-motion-1" aria-label="footnote motion 1"><sup>1</sup></a>
-        </li>
-        <li>Animation duration should not be more than 200ms for interactions to feel immediate</li>
-        <li>
-          Animation values should be proportional to the trigger size:
-          <ul>
-            <li>Don't animate dialog scale in from 0 → 1, fade opacity and scale from ~0.8</li>
-            <li>Don't scale buttons on press from 1 → 0.8, but ~0.96, ~0.9, or so</li>
-          </ul>
-        </li>
-        <li id="content-motion-2">
-          Actions that are frequent and low in novelty should avoid extraneous animations:
-          <a href="#footnote-motion-2" aria-label="footnote motion 2"><sup>2</sup></a>
-          <ul>
-            <li>Opening a right click menu</li>
-            <li>Deleting or adding items from a list</li>
-            <li>Hovering trivial buttons</li>
-          </ul>
-        </li>
-        <li>Looping animations should pause when not visible on the screen to offload CPU and GPU usage</li>
-        <li>Use "scroll-behavior: smooth" for navigating to in-page anchors, with an appropriate offset</li>
+        Animation values should be proportional to the trigger size:
+        <li>Don't animate dialog scale in from 0 → 1, fade opacity and scale from ~0.8</li>
+        <li>Don't scale buttons on press from 1 → 0.8, but ~0.96, ~0.9, or so</li>
       </ul>
+      <ul id="content-motion-2">
+        Actions that are frequent and low in novelty should avoid extraneous animations:
+        <a href="#footnote-motion-2" aria-label="footnote motion 2"><sup>2</sup></a>
+        <li>Opening a right click menu</li>
+        <li>Deleting or adding items from a list</li>
+        <li>Hovering trivial buttons</li>
+      </ul>
+      <p>Looping animations should pause when not visible on the screen to offload CPU and GPU usage</p>
+      <p>Use "scroll-behavior: smooth" for navigating to in-page anchors, with an appropriate offset</p>
     </article>
     <!--  -->
     <!--  -->
@@ -201,23 +192,21 @@
     <hr />
     <article id="touch">
       <h2>#Touch</h2>
-      <ul>
-        <li id="content-touch-3">
-          Hover states should not be visible on touch press, use "@media (hover: hover)"
-          <a href="#footnote-touch-3" aria-label="footnote touch 3"><sup>3</sup></a>
-        </li>
-        <li>Font size for inputs should not be smaller than 16px to prevent iOS zooming on focus</li>
-        <li>Inputs should not auto focus on touch devices as it will open the keyboard and cover the screen</li>
-        <li>Apply "muted" and "playsinline" to "&lt;video /&gt;" tags to auto play on iOS</li>
-        <li>
-          Disable "touch-action" for custom components that implement pan and zoom gestures to prevent interference from
-          native behavior like zooming and scrolling
-        </li>
-        <li>
-          Disable the default iOS tap highlight with "-webkit-tap-highlight-color: rgba(0,0,0,0)", but always replace it
-          with an appropriate alternative
-        </li>
-      </ul>
+      <p id="content-touch-3">
+        Hover states should not be visible on touch press, use "@media (hover: hover)"
+        <a href="#footnote-touch-3" aria-label="footnote touch 3"><sup>3</sup></a>
+      </p>
+      <p>Font size for inputs should not be smaller than 16px to prevent iOS zooming on focus</p>
+      <p>Inputs should not auto focus on touch devices as it will open the keyboard and cover the screen</p>
+      <p>Apply "muted" and "playsinline" to "&lt;video /&gt;" tags to auto play on iOS</p>
+      <p>
+        Disable "touch-action" for custom components that implement pan and zoom gestures to prevent interference from
+        native behavior like zooming and scrolling
+      </p>
+      <p>
+        Disable the default iOS tap highlight with "-webkit-tap-highlight-color: rgba(0,0,0,0)", but always replace it
+        with an appropriate alternative
+      </p>
     </article>
     <!--  -->
     <!--  -->
@@ -227,24 +216,22 @@
     <!--  -->
     <article id="optimization">
       <h2>#Optimizations</h2>
-      <ul>
-        <li>Large "blur()" values for "filter" and "backdrop-filter" may be slow</li>
-        <li>Scaling and blurring filled rectangles will cause banding, use radial gradients instead</li>
-        <li>Sparingly enable GPU rendering with "transform: translateZ(0)" for unperformant animations</li>
-        <li id="content-optimization-4">
-          Toggle "will-change" on unperformant scroll animations for the duration of the animation
-          <a href="#footnote-optimization-4" aria-label="footnote optimization 4"><sup>4</sup></a>
-        </li>
-        <li>Auto-playing too many videos on iOS will choke the device, pause or even unmount off-screen videos</li>
-        <li id="content-optimization-5">
-          Bypass React's render lifecycle with refs for real-time values that can commit to the DOM directly
-          <a href="#footnote-optimization-5" aria-label="footnote optimization 5"><sup>5</sup></a>
-        </li>
-        <li>
-          <a href="https://github.com/GoogleChromeLabs/react-adaptive-hooks" target="_blank">Detect and adapt</a> to the
-          hardware and network capabilities of the user's device
-        </li>
-      </ul>
+      <p>Large "blur()" values for "filter" and "backdrop-filter" may be slow</p>
+      <p>Scaling and blurring filled rectangles will cause banding, use radial gradients instead</p>
+      <p>Sparingly enable GPU rendering with "transform: translateZ(0)" for unperformant animations</p>
+      <p id="content-optimization-4">
+        Toggle "will-change" on unperformant scroll animations for the duration of the animation
+        <a href="#footnote-optimization-4" aria-label="footnote optimization 4"><sup>4</sup></a>
+      </p>
+      <p>Auto-playing too many videos on iOS will choke the device, pause or even unmount off-screen videos</p>
+      <p id="content-optimization-5">
+        Bypass React's render lifecycle with refs for real-time values that can commit to the DOM directly
+        <a href="#footnote-optimization-5" aria-label="footnote optimization 5"><sup>5</sup></a>
+      </p>
+      <p>
+        <a href="https://github.com/GoogleChromeLabs/react-adaptive-hooks" target="_blank">Detect and adapt</a> to the
+        hardware and network capabilities of the user's device
+      </p>
     </article>
     <!--  -->
     <!--  -->
@@ -255,41 +242,39 @@
     <!--  -->
     <article id="accessibility">
       <h2>#Accessibility</h2>
-      <ul>
-        <li id="content-accessibility-6">
-          Disabled buttons should not have tooltips, they are not accessible
-          <a href="#footnote-accessibility-6 " aria-label="footnote accessibility 6"><sup>6</sup></a>
-        </li>
-        <li id="content-accessibility-7">
-          Box shadow should be used for focus rings, not outline which won’t respect radius
-          <a href="#footnote-accessibility-7" aria-label="footnote accessibility 7"><sup>7</sup></a>
-        </li>
-        <li>
-          Focusable elements in a sequential list should be navigable with &lt;kbd&gt; ↑&lt;/kbd&gt;
-          &lt;kbd&gt;↓&lt;/kbd&gt;
-        </li>
-        <li>
-          Focusable elements in a sequential list should be deletable with &lt;kbd&gt;⌘&lt;/kbd&gt;
-          &lt;kbd&gt;Backspace&lt;/kbd&gt;
-        </li>
-        <li>To open immediately on press, dropdown menus should trigger on "mousedown", not "click"</li>
-        <li>Use a svg favicon with a style tag that adheres to the system theme based on "prefers-color-scheme"</li>
-        <li>Icon only interactive elements should define an explicit "aria-label"</li>
-        <li>Tooltips triggered by hover should not contain interactive content</li>
-        <li>
-          Images should always be rendered with "&lt;img /&gt;" for screen readers and ease of copying from the right
-          click menu
-        </li>
-        <li>
-          Illustrations built with HTML should have an explicit "aria-label" instead of announcing the raw DOM tree to
-          people using screen readers
-        </li>
-        <li>Gradient text should unset the gradient on "::selection" state</li>
-        <li>
-          When using nested menus, use a "prediction cone" to prevent the pointer from accidentally closing the menu
-          when moving across other elements.
-        </li>
-      </ul>
+      <p id="content-accessibility-6">
+        Disabled buttons should not have tooltips, they are not accessible
+        <a href="#footnote-accessibility-6 " aria-label="footnote accessibility 6"><sup>6</sup></a>
+      </p>
+      <p id="content-accessibility-7">
+        Box shadow should be used for focus rings, not outline which won’t respect radius
+        <a href="#footnote-accessibility-7" aria-label="footnote accessibility 7"><sup>7</sup></a>
+      </p>
+      <p>
+        Focusable elements in a sequential list should be navigable with &lt;kbd&gt; ↑&lt;/kbd&gt;
+        &lt;kbd&gt;↓&lt;/kbd&gt;
+      </p>
+      <p>
+        Focusable elements in a sequential list should be deletable with &lt;kbd&gt;⌘&lt;/kbd&gt;
+        &lt;kbd&gt;Backspace&lt;/kbd&gt;
+      </p>
+      <p>To open immediately on press, dropdown menus should trigger on "mousedown", not "click"</p>
+      <p>Use a svg favicon with a style tag that adheres to the system theme based on "prefers-color-scheme"</p>
+      <p>Icon only interactive elements should define an explicit "aria-label"</p>
+      <p>Tooltips triggered by hover should not contain interactive content</p>
+      <p>
+        Images should always be rendered with "&lt;img /&gt;" for screen readers and ease of copying from the right
+        click menu
+      </p>
+      <p>
+        Illustrations built with HTML should have an explicit "aria-label" instead of announcing the raw DOM tree to
+        people using screen readers
+      </p>
+      <p>Gradient text should unset the gradient on "::selection" state</p>
+      <p>
+        When using nested menus, use a "prediction cone" to prevent the pointer from accidentally closing the menu when
+        moving across other elements.
+      </p>
     </article>
     <!--  -->
     <!--  -->
@@ -301,19 +286,15 @@
     <!--  -->
     <article id="design">
       <h2>#Design</h2>
+      <p>Optimistically update data locally and roll back on server error with feedback</p>
+      <p>Authentication redirects should happen on the server before the client loads to avoid janky URL changes</p>
+      <p>Style the document selection state with "::selection"</p>
       <ul>
-        <li>Optimistically update data locally and roll back on server error with feedback</li>
-        <li>Authentication redirects should happen on the server before the client loads to avoid janky URL changes</li>
-        <li>Style the document selection state with "::selection"</li>
-        <li>
-          Display feedback relative to its trigger:
-          <ul>
-            <li>Show a temporary inline checkmark on a successful copy, not a notification</li>
-            <li>Highlight the relevant input(s) on form error(s)</li>
-          </ul>
-        </li>
-        <li>Empty states should prompt to create a new item, with optional templates</li>
+        Display feedback relative to its trigger:
+        <li>Show a temporary inline checkmark on a successful copy, not a notification</li>
+        <li>Highlight the relevant input(s) on form error(s)</li>
       </ul>
+      <p>Empty states should prompt to create a new item, with optional templates</p>
     </article>
     <!--  -->
     <!--  -->

@@ -1231,6 +1231,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1403,6 +1407,12 @@ h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media screen and (max-width: 640px) {
+  ul {
+    list-style: none !important;
+  }
+}
+
 /* summary::-webkit-details-marker {
   display: none;
 }
@@ -1481,14 +1491,6 @@ summary {
 }
 
 @media (min-width: 1024px){
-  .lg\:mt-5{
-    margin-top: 1.25rem;
-  }
-
-  .lg\:mt-10{
-    margin-top: 2.5rem;
-  }
-
   .\[\&\>article\]\:lg\:max-w-\[75\%\]>article{
     max-width: 75%;
   }
@@ -1511,19 +1513,6 @@ summary {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
-.\[\&\>li\:hover\]\:cursor-pointer>li:hover{
-  cursor: pointer;
-}
-
-.\[\&\>li\:hover\]\:underline>li:hover{
-  text-decoration-line: underline;
-}
-
-.\[\&\>li\>a\:hover\]\:text-slate-50>li>a:hover{
-  --tw-text-opacity: 1;
-  color: rgb(248 250 252 / var(--tw-text-opacity));
-}
-
 .\[\&\>li\>a\:hover\]\:text-gray-400>li>a:hover{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1537,16 +1526,6 @@ summary {
   text-decoration-line: none;
 }
 
-.\[\&\>li\>button\:hover\]\:underline>li>button:hover{
-  text-decoration-line: underline;
-}
-
 .\[\&\>li\]\:grow>li{
   flex-grow: 1;
-}
-
-@media (hover: hover){
-  .\[\&\>li\]\:hover\:underline:hover>li{
-    text-decoration-line: underline;
-  }
 }
