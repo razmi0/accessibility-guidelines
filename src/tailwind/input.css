@@ -25,44 +25,19 @@
   --body-radial-color-2: #050e29;
 }
 
-*{
+* {
   @apply outline-none focus-visible:outline-blue-500 focus-visible:ring-blue-500 rounded-sm;
 }
 
 body {
   background: radial-gradient(circle at center, var(--body-radial-color-1) 0%, var(--body-radial-color-2) 100%);
-  min-height : 100vh;
+  min-height: 100vh;
 }
 
-
-
-
-.translate-center  {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+p {
+  @apply text-balance;
 }
 
-
-
-.first-layer {
-  z-index : 9999;
-}
-
-.horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
-.vertical {
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 h1,
 h2,
 h3,
@@ -71,21 +46,6 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
-
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.4em 0.8em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  color: #e8e8e8;
-  /* outline: -webkit-focus-ring-color auto 5px #535bf2; */
-}
-
 
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
@@ -102,28 +62,11 @@ button {
     0px 0px 0px 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.button-wave {
-  position: absolute;
-  background: 0 0;
-  pointer-events: none;
-  box-sizing: border-box;
-  @apply text-blue-500;
-  box-shadow: 0 0 0 0 currentColor;
-  opacity: 0.2;
+
+/* summary::-webkit-details-marker {
+  display: none;
 }
 
-.button-wave.wave-motion-appear {
-  --cb-ease-out: cubic-bezier(0.08, 0.82, 0.17, 1);
-  transition: box-shadow 0.4s cubic-bezier(0.08, 0.82, 0.17, 1), opacity 2s cubic-bezier(0.08, 0.82, 0.17, 1);
-}
-
-.button-wave.wave-motion-appear-active {
-  box-shadow: 0 0 0 6px currentColor;
-  opacity: 0;
-}
-
-.button-wave.wave-motion-appear.wave-quick {
-  --cb-ease-in-out: cubic-bezier(0.78, 0.14, 0.15, 0.86)
-  transition: box-shadow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.35s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-}
-
+summary {
+  list-style: none;
+} */
