@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+
+  -webkit-tap-highlight-color: transparent;
+
+  --body-radial-color-1: #181c22;
+  --body-radial-color-2: #050e29;
+}
+
+*{
+  @apply outline-none focus-visible:outline-blue-500 focus-visible:ring-blue-500 rounded-sm;
+}
+
+body {
+  background: radial-gradient(circle at center, var(--body-radial-color-1) 0%, var(--body-radial-color-2) 100%);
+  min-height : 100vh;
+}
+
+
+
+
+.translate-center  {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+
+
+.first-layer {
+  z-index : 9999;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 0.8em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  color: #e8e8e8;
+  /* outline: -webkit-focus-ring-color auto 5px #535bf2; */
+}
+
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.card {
+  @apply rounded-lg border-[1px] border-black/40 shadow-inner-shadow-dark-sm;
+}
+/*  */
+
+.shadow-inner-shadow-dark-sm {
+  --tw-shadow: 0px 1px 0px 0px hsla(0, 0%, 100%, 0.02) inset, 0px 0px 0px 1px hsla(0, 0%, 100%, 0.02) inset,
+    0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+  --tw-shadow-colored: inset 0px 1px 0px 0px var(--tw-shadow-color), inset 0px 0px 0px 1px var(--tw-shadow-color),
+    0px 0px 0px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.button-wave {
+  position: absolute;
+  background: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  @apply text-blue-500;
+  box-shadow: 0 0 0 0 currentColor;
+  opacity: 0.2;
+}
+
+.button-wave.wave-motion-appear {
+  --cb-ease-out: cubic-bezier(0.08, 0.82, 0.17, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.08, 0.82, 0.17, 1), opacity 2s cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.button-wave.wave-motion-appear-active {
+  box-shadow: 0 0 0 6px currentColor;
+  opacity: 0;
+}
+
+.button-wave.wave-motion-appear.wave-quick {
+  --cb-ease-in-out: cubic-bezier(0.78, 0.14, 0.15, 0.86)
+  transition: box-shadow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), opacity 0.35s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+
