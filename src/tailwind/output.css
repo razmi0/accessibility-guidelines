@@ -1201,6 +1201,10 @@ video {
   width: 2.5rem;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -1211,6 +1215,10 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.list-none{
+  list-style-type: none;
 }
 
 .appearance-none{
@@ -1247,8 +1255,18 @@ video {
   border-width: 1px;
 }
 
+.border-y-2{
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
 .border-black\/40{
   border-color: rgb(0 0 0 / 0.4);
+}
+
+.border-slate-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
 .p-1{
@@ -1258,6 +1276,14 @@ video {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .tabular-nums{
@@ -1455,6 +1481,14 @@ summary {
 }
 
 @media (min-width: 1024px){
+  .lg\:mt-5{
+    margin-top: 1.25rem;
+  }
+
+  .lg\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .\[\&\>article\]\:lg\:max-w-\[75\%\]>article{
     max-width: 75%;
   }
@@ -1475,4 +1509,44 @@ summary {
 .\[\&\>hr\]\:bg-slate-400>hr{
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.\[\&\>li\:hover\]\:cursor-pointer>li:hover{
+  cursor: pointer;
+}
+
+.\[\&\>li\:hover\]\:underline>li:hover{
+  text-decoration-line: underline;
+}
+
+.\[\&\>li\>a\:hover\]\:text-slate-50>li>a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity));
+}
+
+.\[\&\>li\>a\:hover\]\:text-gray-400>li>a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.\[\&\>li\>a\:hover\]\:underline>li>a:hover{
+  text-decoration-line: underline;
+}
+
+.\[\&\>li\>a\]\:no-underline>li>a{
+  text-decoration-line: none;
+}
+
+.\[\&\>li\>button\:hover\]\:underline>li>button:hover{
+  text-decoration-line: underline;
+}
+
+.\[\&\>li\]\:grow>li{
+  flex-grow: 1;
+}
+
+@media (hover: hover){
+  .\[\&\>li\]\:hover\:underline:hover>li{
+    text-decoration-line: underline;
+  }
 }

@@ -50,9 +50,23 @@
         </g>
       </svg>
     </a>
-    <header>
-      <h1 id="page-top">Accessibility guidelines</h1>
-      <nav><ol></ol></nav>
+    <header class="w-full pt-3">
+      <h1 id="page-top" class="w-full text-center">Accessibility guidelines</h1>
+      <nav>
+        <ul
+          class="flex min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
+        >
+          <li><a href="#web-interface">Web interface</a></li>
+          <li><a href="#interactivity">Interactivity</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#motion">Motion</a></li>
+          <li><a href="#touch">Touch</a></li>
+          <li><a href="#optimization">Optimization</a></li>
+          <li><a href="#accessibility">Accessibility</a></li>
+          <li><a href="#design">Design</a></li>
+          <li><a href="#footnotes">Footnotes</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!--  -->
@@ -62,8 +76,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Web Interface</h2>
+    <article id="web-interface">
+      <h2>#Web Interface</h2>
       <p>
         This document outlines a non-exhaustive list of details that make a good (web) interface. It is a living
         document, periodically updated based on learnings. Some of these may be subjective, but most apply to all
@@ -86,8 +100,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Interactivity</h2>
+    <article id="interactivity">
+      <h2>#Interactivity</h2>
       <ul>
         <li>Clicking the input label should focus the input field</li>
         <li>Inputs should be wrapped with a "&lt;form&gt;" to submit by pressing Enter</li>
@@ -116,8 +130,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Typography</h2>
+    <article id="typography">
+      <h2>#Typography</h2>
       <ul>
         <li>Fonts should have "-webkit-font-smoothing: antialiased" applied for better legibility</li>
         <li>Fonts should have "text-rendering: optimizeLegibility" applied for better legibility</li>
@@ -149,8 +163,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Motion</h2>
+    <article id="motion">
+      <h2>#Motion</h2>
       <ul>
         <li id="content-motion-1">
           Switching themes should not trigger transitions and animations on elements
@@ -184,8 +198,8 @@
     <!--  -->
     <!--  -->
     <hr />
-    <article>
-      <h2>Touch</h2>
+    <article id="touch">
+      <h2>#Touch</h2>
       <ul>
         <li id="content-touch-3">
           Hover states should not be visible on touch press, use "@media (hover: hover)"
@@ -210,8 +224,8 @@
     <hr />
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Optimizations</h2>
+    <article id="optimization">
+      <h2>#Optimizations</h2>
       <ul>
         <li>Large "blur()" values for "filter" and "backdrop-filter" may be slow</li>
         <li>Scaling and blurring filled rectangles will cause banding, use radial gradients instead</li>
@@ -238,8 +252,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Accessibility</h2>
+    <article id="accessibility">
+      <h2>#Accessibility</h2>
       <ul>
         <li id="content-accessibility-6">
           Disabled buttons should not have tooltips, they are not accessible
@@ -284,8 +298,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <article>
-      <h2>Design</h2>
+    <article id="design">
+      <h2>#Design</h2>
       <ul>
         <li>Optimistically update data locally and roll back on server error with feedback</li>
         <li>Authentication redirects should happen on the server before the client loads to avoid janky URL changes</li>
@@ -308,8 +322,8 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <footer class="container">
-      <h2>Footnotes</h2>
+    <footer class="container" id="footnotes">
+      <h2>#Footnotes</h2>
       <p id="footnote-motion-1">
         <a href="#content-motion-1" aria-label="content motion 1">[1]</a> : Switching between dark mode or light mode
         will trigger transitions on elements that are meant for explicit interactions like hover. We can
