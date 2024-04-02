@@ -63,12 +63,6 @@ h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media screen and (max-width: 640px) {
-  ul {
-    list-style: none !important;
-  }
-}
-
 /* summary::-webkit-details-marker {
   display: none;
 }

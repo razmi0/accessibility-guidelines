@@ -55,7 +55,7 @@
       <h1 id="page-top" class="w-full text-center">Accessibility guidelines</h1>
       <nav>
         <ul
-          class="flex flex-wrap min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
+          class="flex flex-wrap ps-0 sm:ps-auto min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
         >
           <li><a href="#web-interface">Web interface</a></li>
           <li><a href="#interactivity">Interactivity</a></li>
@@ -78,7 +78,7 @@
     <!--  -->
     <!--  -->
     <article id="web-interface">
-      <h2>#Web Interface</h2>
+      <h2># Web Interface</h2>
       <p>
         This document outlines a non-exhaustive list of details that make a good (web) interface. It is a living
         document, periodically updated based on learnings. Some of these may be subjective, but most apply to all
@@ -102,7 +102,7 @@
     <!--  -->
     <!--  -->
     <article id="interactivity">
-      <h2>#Interactivity</h2>
+      <h2># Interactivity</h2>
       <p>Clicking the input label should focus the input field</p>
       <p>Inputs should be wrapped with a "&lt;form&gt;" to submit by pressing Enter</p>
       <p>Inputs should have an appropriate "type" like "password", "email", etc</p>
@@ -130,7 +130,7 @@
     <!--  -->
     <!--  -->
     <article id="typography">
-      <h2>#Typography</h2>
+      <h2># Typography</h2>
       <p>Fonts should have "-webkit-font-smoothing: antialiased" applied for better legibility</p>
       <p>Fonts should have "text-rendering: optimizeLegibility" applied for better legibility</p>
       <p>Fonts should be subset based on the content, alphabet or relevant language(s)</p>
@@ -161,7 +161,7 @@
     <!--  -->
     <!--  -->
     <article id="motion">
-      <h2>#Motion</h2>
+      <h2># Motion</h2>
       <p id="content-motion-1">
         Switching themes should not trigger transitions and animations on elements
         <a href="#footnote-motion-1" aria-label="footnote motion 1"><sup>1</sup></a>
@@ -191,7 +191,7 @@
     <!--  -->
     <hr />
     <article id="touch">
-      <h2>#Touch</h2>
+      <h2># Touch</h2>
       <p id="content-touch-3">
         Hover states should not be visible on touch press, use "@media (hover: hover)"
         <a href="#footnote-touch-3" aria-label="footnote touch 3"><sup>3</sup></a>
@@ -215,7 +215,7 @@
     <!--  -->
     <!--  -->
     <article id="optimization">
-      <h2>#Optimizations</h2>
+      <h2># Optimizations</h2>
       <p>Large "blur()" values for "filter" and "backdrop-filter" may be slow</p>
       <p>Scaling and blurring filled rectangles will cause banding, use radial gradients instead</p>
       <p>Sparingly enable GPU rendering with "transform: translateZ(0)" for unperformant animations</p>
@@ -241,7 +241,7 @@
     <!--  -->
     <!--  -->
     <article id="accessibility">
-      <h2>#Accessibility</h2>
+      <h2># Accessibility</h2>
       <p id="content-accessibility-6">
         Disabled buttons should not have tooltips, they are not accessible
         <a href="#footnote-accessibility-6 " aria-label="footnote accessibility 6"><sup>6</sup></a>
@@ -285,7 +285,7 @@
     <!--  -->
     <!--  -->
     <article id="design">
-      <h2>#Design</h2>
+      <h2># Design</h2>
       <p>Optimistically update data locally and roll back on server error with feedback</p>
       <p>Authentication redirects should happen on the server before the client loads to avoid janky URL changes</p>
       <p>Style the document selection state with "::selection"</p>
@@ -305,7 +305,7 @@
     <!--  -->
     <!--  -->
     <footer class="container" id="footnotes">
-      <h2>#Footnotes</h2>
+      <h2># Footnotes</h2>
       <p id="footnote-motion-1">
         <a href="#content-motion-1" aria-label="content motion 1">[1]</a> : Switching between dark mode or light mode
         will trigger transitions on elements that are meant for explicit interactions like hover. We can

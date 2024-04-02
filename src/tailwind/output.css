@@ -1282,6 +1282,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.ps-0{
+  padding-inline-start: 0px;
+}
+
 .pt-3{
   padding-top: 0.75rem;
 }
@@ -1405,12 +1409,6 @@ h6 {
   --tw-shadow-colored: inset 0px 1px 0px 0px var(--tw-shadow-color), inset 0px 0px 0px 1px var(--tw-shadow-color),
     0px 0px 0px 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media screen and (max-width: 640px) {
-  ul {
-    list-style: none !important;
-  }
 }
 
 /* summary::-webkit-details-marker {
