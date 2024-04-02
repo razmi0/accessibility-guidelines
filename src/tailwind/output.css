@@ -1511,6 +1511,11 @@ summary {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
+.\[\&\>hr\]\:bg-slate-200>hr{
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .\[\&\>li\>a\:hover\]\:text-gray-400>li>a:hover{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
