@@ -200,6 +200,12 @@
         </li>
       </ul>
     </article>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <hr />
+    <!--  -->
+    <!--  -->
     <article>
       <h3>Optimizations</h3>
       <ul>
@@ -301,39 +307,41 @@
     <footer class="container">
       <h3>Footnotes</h3>
       <p id="footnote-motion-1">
-        <a href="#content-motion-1">[1]</a> : Switching between dark mode or light mode will trigger transitions on
-        elements that are meant for explicit interactions like hover. We can
+        <a href="#content-motion-1" aria-label="content motion 1">[1]</a> : Switching between dark mode or light mode
+        will trigger transitions on elements that are meant for explicit interactions like hover. We can
         <a href="https://paco.me/writing/disable-theme-transitions" target="_blank">disable transitions temporarily</a>
         to prevent this. For Next.js, use <a href="https://github.com/pacocoursey/next-themes">next-themes</a> which
         prevents transitions out of the box.
       </p>
       <p id="footnote-motion-2">
-        <a href="#content-motion-2">[2]</a> : This is a matter of taste but some interactions just feel better with no
-        motion. For example, the native macOS right click menu only animates out, not in, due to the frequent usage of
-        it.
+        <a href="#content-motion-2" aria-label="content motion 2">[2]</a> : This is a matter of taste but some
+        interactions just feel better with no motion. For example, the native macOS right click menu only animates out,
+        not in, due to the frequent usage of it.
       </p>
       <p id="footnote-touch-3">
-        <a href="#content-touch-3">[3]</a> : Most touch devices on press will temporarily flash the hover state, unless
-        explicitly only defined for pointer devices with
+        <a href="#content-touch-3" aria-label="content touch 3">[3]</a> : Most touch devices on press will temporarily
+        flash the hover state, unless explicitly only defined for pointer devices with
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover">@media (hover: hover)</a>
       </p>
       <p id="footnote-optimization-4">
-        <a href="#content-optimization-4">[4]</a> : Use
+        <a href="#content-optimization-4" aria-label="content optimization 4">[4]</a> : Use
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/will-change">"will-change"</a> as a last resort to
         improve performance. Pre-emptively throwing it on elements for better performance may have the opposite effect.
       </p>
       <p id="footnote-optimization-5">
-        <a href="#content-optimization-5">[5]</a> : This might be controversial but sometimes it can be beneficial to
-        manipulate the DOM directly. For example, instead of relying on React re-rendering on every wheel event, we can
-        track the delta in a ref and update relevant elements directly in the callback.
+        <a href="#content-optimization-5" aria-label="content optimization 5">[5]</a> : This might be controversial but
+        sometimes it can be beneficial to manipulate the DOM directly. For example, instead of relying on React
+        re-rendering on every wheel event, we can track the delta in a ref and update relevant elements directly in the
+        callback.
       </p>
       <p id="footnote-accessibility-6">
-        <a href="#content-accessibility-6">[6]</a> : Disabled buttons do not appear in tab order in the DOM so the
-        tooltip will never be announced for keyboard users and they won't know why the button is disabled.
+        <a href="#content-accessibility-6" aria-label="content accessibility 6">[6]</a> : Disabled buttons do not appear
+        in tab order in the DOM so the tooltip will never be announced for keyboard users and they won't know why the
+        button is disabled.
       </p>
       <p id="footnote-accessibility-7">
-        <a href="#content-accessibility-7">[7]</a> : As of 2023, Safari will not take the border radius of an element
-        into account when defining custom outline styles.
+        <a href="#content-accessibility-7" aria-label="content accessibility 7">[7]</a> : As of 2023, Safari will not
+        take the border radius of an element into account when defining custom outline styles.
         <a href="https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes"
           >Safari 16.4</a
         >
