@@ -8,14 +8,12 @@
     <title>Accessibility guidelines</title>
   </head>
   <body
-    class="flex flex-col items-center justify-center m-auto min-w-full h-fit prose prose-invert p-1 sm:p-3 sm:py-5 py-3 [&>article]:container [&>hr]:h-[2px] [&>hr]:w-20 [&>hr]:bg-slate-200 [&>hr]:border-0 [&>article]:lg:max-w-[75%]"
-  >
+    class="flex flex-col items-center justify-center m-auto min-w-full h-fit prose prose-invert p-1 sm:p-3 sm:py-5 py-3 [&>article]:container [&>hr]:h-[2px] [&>hr]:w-20 [&>hr]:bg-slate-200 [&>hr]:border-0 [&>article]:lg:max-w-[75%]">
     <a
       class="appearance-none block cursor-pointer fixed bottom-0 right-0 mr-5 mb-5 rounded-full hover:bg-slate-800 w-10 h-10 p-1 focus:outline-4 focus:outline-slate-100"
       aria-label="scroll to the top of the page"
       role="button"
-      href="#page-top"
-    >
+      href="#page-top">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -32,8 +30,7 @@
                   stroke="#FFFFFF"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                ></polyline>
+                  stroke-width="2"></polyline>
                 <line
                   fill="none"
                   stroke="#FFFFFF"
@@ -43,8 +40,7 @@
                   x1="12"
                   x2="12"
                   y1="21.3"
-                  y2="4.8"
-                ></line>
+                  y2="4.8"></line>
               </g>
             </g>
           </g>
@@ -53,10 +49,9 @@
     </a>
     <header class="w-full pt-3">
       <h1 id="page-top" class="w-full text-center">Accessibility guidelines</h1>
-      <nav>
+      <nav class="max-w-7xl w-full m-auto">
         <ul
-          class="flex flex-wrap ps-0 sm:ps-auto min-w-full w-full [&>li]:grow list-none [&>li>a:hover]:underline [&>li>a]:no-underline [&>li>a:hover]:text-gray-400 border-y-2 border-slate-200"
-        >
+          class="flex flex-wrap space-x-2 ps-0 sm:ps-auto [&>li]:grow list-none [&_a:hover]:underline [&_a]:no-underline [&_a:hover]:text-gray-400 border-y-2 border-slate-200">
           <li><a href="#web-interface">Web interface</a></li>
           <li><a href="#interactivity">Interactivity</a></li>
           <li><a href="#typography">Typography</a></li>
@@ -119,6 +114,10 @@
       <p>
         Interactive elements in a vertical or horizontal list should have no dead areas between each element, instead,
         increase their "padding"
+      </p>
+      <p>
+        Buttons should not be used when interacting with URL or triggering a page navigation event. Instead "&lt;a&gt;"
+        link tag is a preferable choice.
       </p>
     </article>
     <hr />
