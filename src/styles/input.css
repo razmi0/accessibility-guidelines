@@ -60,23 +60,23 @@ h6 {
 /* Navbar */
 /*        */
 header {
-  @apply w-full pt-3 text-center;
+  @apply w-full pt-3 grid place-content-center my-10;
 
   h1 {
-    @apply w-full;
+    @apply w-full text-center;
   }
 
   nav {
-    @apply max-w-7xl w-full m-auto;
+    @apply w-full m-auto;
 
     ul {
-      @apply flex flex-wrap space-x-2 ps-0 list-none border-y-2 border-slate-200;
+      @apply flex flex-wrap space-x-3 px-2 list-none border border-slate-200 justify-around;
 
       li {
-        @apply flex-grow;
+        @apply has-[a:hover]:bg-slate-800 p-0 max-w-fit;
 
         a {
-          @apply text-balance hover:underline hover:text-gray-400 block w-full no-underline;
+          @apply text-balance block size-full no-underline px-2 py-1;
         }
       }
     }
