@@ -1152,12 +1152,20 @@ video {
   position: fixed;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
 }
 
 .bottom-0{
   bottom: 0px;
+}
+
+.bottom-8{
+  bottom: 2rem;
 }
 
 .right-0{
@@ -1262,12 +1270,20 @@ video {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
 .text-balance{
   text-wrap: balance;
 }
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 
 .border{
@@ -1279,9 +1295,14 @@ video {
   border-bottom-width: 2px;
 }
 
-.bg-black{
+.bg-slate-800{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-1{
@@ -1290,6 +1311,16 @@ video {
 
 .p-2{
   padding: 0.5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-3{
@@ -1317,6 +1348,10 @@ video {
 
 .accent-green-600{
   accent-color: #16a34a;
+}
+
+.opacity-0{
+  opacity: 0;
 }
 
 .shadow{
@@ -2129,22 +2164,60 @@ header{
   }
 }
 
+.anchor-page-top {
+  p{
+    position: absolute;
+  }
+  p{
+    bottom: 2rem;
+  }
+  p{
+    right: 0px;
+  }
+  p{
+    white-space: nowrap;
+  }
+  p{
+    border-radius: 0.75rem;
+  }
+  p{
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+  p{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  p{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  p{
+    opacity: 0;
+  }
+  p{
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
 body:has(input[id="font-toggler"]:checked) {
   font-family: Dyslexia, sans-serif;
 }
 
 ::-moz-selection{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 ::selection{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .\[\&\>article\]\:container>article{
@@ -2192,6 +2265,10 @@ body:has(input[id="font-toggler"]:checked) {
 .focus-visible\:ring-blue-500:focus-visible{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+}
+
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
 }
 
 @media (hover: hover){
