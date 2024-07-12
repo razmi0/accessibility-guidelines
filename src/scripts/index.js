@@ -1,10 +1,12 @@
-import { setupIntersectionObserver, ts } from "./helpers.js";
+import { setupIntersectionObserver, TITLES } from "./helpers.js";
 
-const dt = document.querySelector("#document-title");
-if (!dt) throw Error("Document title element not found");
+const documentTitle = document.querySelector("#document-title");
+if (!documentTitle) throw Error("Document title element not found");
 
-Object.values(ts).forEach((e) => {
-  setupIntersectionObserver(document.querySelector(`#${e.selector}`), {
-    onIntersect: () => (dt.textContent = "header-page-top" === e.selector ? e.title : `Guidelines -/- ${e.title}`),
+Object.values(TITLES).forEach((title) => {
+  setupIntersectionObserver(document.querySelector(`#${title.selector}`), {
+    onIntersect: () =>
+      (documentTitle.textContent =
+        title.selector === "header-page-top" ? title.title : `Guidelines -/- ${title.title}`),
   });
 });

@@ -1,5 +1,7 @@
 //@ts-check
-export const ts = {
+// Description: This file contains helper functions and constants used in the project.
+//
+export const TITLES = {
   header: { selector: "header-page-top", title: "Accessibility guidelines" },
   webInterface: { selector: "web-interface", title: "Web Interface" },
   interactivity: { selector: "interactivity", title: "Interactivity" },
@@ -12,15 +14,19 @@ export const ts = {
   footnotes: { selector: "footnotes", title: "Footnotes" },
 };
 
-const hI = (e, t) => {
-  let { onIntersect: o, onDisappear: i } = t;
-  e.forEach((e) => (e.isIntersecting ? o() : i()));
+const handleIntersection = (entries, options) => {
+  const { onIntersect, onDisappear } = options;
+  entries.forEach((entry) => (entry.isIntersecting ? onIntersect() : onDisappear()));
 };
 
 export const setupIntersectionObserver = (
-  e,
-  { threshold: t = 0.9, onIntersect: o = () => {}, onDisappear: i = () => {} }
+  element,
+  { threshold = 0.9, onIntersect = () => {}, onDisappear = () => {} }
 ) => {
-  let n = { onIntersect: o, onDisappear: i };
-  new IntersectionObserver((e) => hI(e, n), { threshold: t }).observe(e);
+  const options = { onIntersect, onDisappear };
+  const observer = new IntersectionObserver((entry) => handleIntersection(entry, options), {
+    threshold: threshold,
+  });
+
+  observer.observe(element);
 };
