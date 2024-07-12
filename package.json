@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "tw:build": "npx tailwindcss -i ./src/tailwind/input.css -o ./src/tailwind/output.css",
-    "tw:watch": "npx tailwindcss -i ./src/tailwind/input.css -o ./src/tailwind/output.css --watch"
+    "tw:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
+    "tw:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
