@@ -2050,6 +2050,35 @@ header{
   }
 }
 
+.anchor-page-top{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.anchor-page-top:focus{
+  outline-width: 4px;
+  outline-color: #f1f5f9;
+}
+
+@media (hover: hover){
+  .anchor-page-top:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+}
+
 .\[\&\>article\]\:container>article{
   width: 100%;
 }
@@ -2086,10 +2115,6 @@ header{
 
 .focus\:outline-4:focus{
   outline-width: 4px;
-}
-
-.focus\:outline-slate-100:focus{
-  outline-color: #f1f5f9;
 }
 
 .focus-visible\:outline-blue-500:focus-visible{
