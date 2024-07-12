@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/tailwind/input.css", "./index.html"],
+  content: ["./src/styles/input.css", "./index.html"],
   theme: {
     extend: {
       colors: {
